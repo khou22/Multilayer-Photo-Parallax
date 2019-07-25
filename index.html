@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 <body>
   <style>
     @import url('https://fonts.googleapis.com/css?family=Markazi+Text|Raleway');
@@ -12,7 +16,7 @@
 
     #parallax-container {
       display: block;
-      height: 750px;
+      height: 100vh;
     }
 
     #parallax-container div {
@@ -20,8 +24,10 @@
       top: 0;
       background-position: center !important;
       transform: translateY(0px);
-      height: 750px;
+      height: 100%;
       width: 100%;
+      display: flex;
+      justify-content: center;
     }
 
     #content {
@@ -43,8 +49,8 @@
     }
 
     img {
-      width: 100%;
-      height: 100%;
+      /* width: 100%; */
+      max-height: 100%;
     }
   </style>
 
@@ -54,6 +60,9 @@
     </div>
     <div>
       <img src="Mountains.png">
+    </div>
+    <div>
+      <img src="Trees.png">
     </div>
   </div>
   <div id="content">
