@@ -59,6 +59,7 @@
     <div><img src="Bear Valley Drone/0.png"></div>
     <div><img src="Bear Valley Drone/1.png"></div>
     <div><img src="Bear Valley Drone/2.png"></div>
+    <div><img src="Bear Valley Drone/3.png"></div>
 
     <!-- <div><img src="Golden Gate Bridge Steel Wool/0.png"></div>
     <div><img src="Golden Gate Bridge Steel Wool/1.png"></div> -->
@@ -95,7 +96,12 @@
       let parent = document.getElementById('parallax-container');
       let children = parent.getElementsByTagName('div');
       for (let i = 0; i < children.length; i++) {
-        children[i].style.transform = 'translateY(-' + (window.pageYOffset * i / children.length) + 'px)';
+        const x = window.pageYOffset * i / children.length;
+
+        // Attempting the dolly zoom..
+        // children[i].style.transform = `translateY(-${x}px) scale(${1 + (x * 0.0002)})`;
+
+        children[i].style.transform = `translateY(-${x}px)`;
       }
     }, false)
   </script>
